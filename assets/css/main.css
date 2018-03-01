@@ -1670,7 +1670,6 @@
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 1em 0;
-		text-transform: uppercase;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1817,7 +1816,6 @@
 		padding: 0 2.2em;
 		text-align: center;
 		text-decoration: none;
-		text-transform: uppercase;
 		white-space: nowrap;
 	}
 
@@ -2565,7 +2563,7 @@
 		color: #aaa;
 		position: relative;
 		margin: 0 0 1.5em 0;
-		text-transform: uppercase;
+		
 	}
 
 	header h2 + p {
@@ -2797,7 +2795,7 @@
 		left: 0;
 		line-height: 4.4em;
 		position: fixed;
-		text-transform: uppercase;
+
 		top: 0;
 		width: 100%;
 		z-index: 10000;
@@ -2991,7 +2989,7 @@
 		max-width: 80%;
 		width: 20em;
 		padding: 0.5em 1.25em;
-		text-transform: uppercase;
+	
 	}
 
 		#navPanel ul {
@@ -3117,7 +3115,6 @@
 			color: #aaa;
 			font-size: 1.5em;
 			margin-bottom: 1.75em;
-			text-transform: uppercase;
 		}
 
 		@media screen and (max-width: 1280px) {
