@@ -164,38 +164,36 @@ function createDrone() {
  var cost = 0;
  //frames
  if (fr == "p") {
-    ff = "Your plastic drone is low weight and relatively flexible; however, it is highly susceptible to damage due to its low resilience.";
-    cost = cost + 300;
+    ff = "Your Physical LARS is heavy and takes up space; however, it will look nice in the office as well as  ";
+    cost = cost + 500;
  }
  else if (fr == "w") {
-    ff = "Your wood drone is medium weight and slightly flexible; however, it is susceptible to damage due to its medium resilience.";
-     cost = cost + 400;
+    ff = "Your digital LARS will be on a mobile device; however, it is very light and can be very mobile.";
+     cost = cost + 200;
  }
- else if (fr == "a") {
-    ff = "Your aluminum drone is high weight and inflexible; however, it is less susceptible to damage due to its high resilience and strength.";
-     cost = cost + 500;
+
  }
 //motors
  if (mt == "threes") {
-    mf = "The device is simple, with three motors that provide average power. ";
+    mf = "LARS will be able to grade papers with great accuracy. ";
      cost = cost + 50;
  }
  else if (mt == "fours") {
-    mf = "The device is relatively complex, with four motors that provide medium power. ";
+    mf = "LARS can offer a learning program students k-12. ";
      cost = cost + 80;
  }
  else if (mt == 'sixes') {
-    mf = "The device is very complex, with six motors that provide high power. ";
+    mf = "LARS is able to build a class curriculum through analyzing teacher plans and course requirements. ";
      cost = cost + 110;
  }
 //power
  if (po == 'b') {
-    pf = "It is able to operate through a battery, a standard source of drone energy that provides average power.";
-     cost = cost + 30;
+    pf = "LARS is able to operate on a battery which can hold up to a 12 hour charge.";
+     cost = cost + 50;
  }
  else if (po == 'f') {
-    pf = "It is able to operate through fuel, a less common source of drone energy that provides high power.";
-     cost = cost + 70;
+    pf = "LARS is able to opperate on fuel which can last longer than on battery.";
+     cost = cost + 90;
  }
  else if (po == 's') {
     pf = "It is able to operate through solar power, a less common but environmentally-friendly source of drone energy that provides high power.";
@@ -203,19 +201,19 @@ function createDrone() {
  }
  //wing type
  if (wt == 'fi') {
-    wf = "The fixed wing offers a simple structure that is aerodynamic for longer flights, easy to repair, and able to carry larger payloads. The fixed wing is limited because the drone can only fly in forward motion.";
+    wf = "LARS is functional with RGB lighting that makes him look attractive.";
      cost = cost + 50;
  }
  else if (wt == 'rp') {
-    wf = "The rotary wing offers a more complicated structure that is able to hover in mid-air, perform unique maneuvers in multiple directions, and fly with more control and thrust. The rotary wing is limited because the drone is more mechanically and electrically advanced, requiring more expensive maintenance. ";
-     cost = cost + 90;
+    wf = "LARS will come with no lights and look lame. ";
+     cost = cost + 10;
  }
  if (ad == 'gps') {
-    af = "The added GPS system enables ground station to control the drone’s path. ";
+    af = "LARS is able to translate up to 20 different languages.";
      cost = cost + 100;
  }
  else if (ad == 'cam') {
-    af = "The added camera enables ground station to visualize the drone’s surroundings and to capture images.";
+    af = "LARS will be able to provide course materials that will adapt to what the student needs.";
      cost = cost + 100;
  }
  else if (ad == 'sen') {
