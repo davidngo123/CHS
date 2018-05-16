@@ -142,7 +142,7 @@ var titlebox = document.getElementById("titleofdrone");
 </script>
 
 <script>
-function createDrone() {
+function createLARS() {
  var frame = document.getElementById("one");
  var motors = document.getElementById("two");
  var power = document.getElementById("three");
@@ -163,64 +163,58 @@ function createDrone() {
  var cf = document.getElementById("cost");
  var cost = 0;
  //frames
- if (fr == "p") {
-    ff = "Your Physical LARS is heavy and takes up space; however, it will look nice in the office as well as  ";
-    cost = cost + 500;
+ if (fr == "h") {
+    ff = "Your LARS is larger, but it can contain significantly more sheets of paper to work without interruption. It can store up to 150 sheets of questions and answers to grade.  ";
+    cost = cost + 200;
  }
- else if (fr == "w") {
-    ff = "Your digital LARS will be on a mobile device; however, it is very light and can be very mobile.";
-     cost = cost + 200;
+ else if (fr == "l") {
+    ff = "Your LARS is smaller, but it can only contain 30 sheets of questions and answers to grade before needing to be filled again. ";
+     cost = cost + 100;
  }
- else if (fr == "a") {
-   ff = "Your aluminum drone is high weight and inflexible; however, it is less susceptible to damage due to its high resilience and strength.";
-    cost = cost + 500;
- }
+
 //motors
- if (mt == "threes") {
-    mf = "LARS will be able to grade papers with great accuracy. ";
+ if (mt == "lo") {
+    mf = "Your LARS can grade papers for significantly longer periods of time, with the battery only needing to be replaced every 10 hours. ";
      cost = cost + 50;
  }
- else if (mt == "fours") {
-    mf = "LARS can offer a learning program students k-12. ";
-     cost = cost + 80;
+ else if (mt == "sh") {
+    mf = "Your LARS can grade papers for only short periods of time before needing to be recharged again. ";
+     cost = cost + 25;
  }
- else if (mt == 'sixes') {
-    mf = "LARS is able to build a class curriculum through analyzing teacher plans and course requirements. ";
-     cost = cost + 110;
- }
+ 
 //power
- if (po == 'b') {
-    pf = "LARS is able to operate on a battery which can hold up to a 12 hour charge.";
+ if (po == 'sm') {
+    pf = "Your LARS will be a little bit slower and able to store less memory, but it will still be able to grade papers well. ";
      cost = cost + 50;
  }
- else if (po == 'f') {
-    pf = "LARS is able to opperate on fuel which can last longer than on battery.";
-     cost = cost + 90;
- }
- else if (po == 's') {
-    pf = "It is able to operate through solar power, a less common but environmentally-friendly source of drone energy that provides high power.";
-     cost = cost + 110;
+ else if (po == 'la') {
+    pf = "Your LARS will grade papers exceptionally well due to its large memory and quick speed. ";
+     cost = cost + 150;
  }
  //wing type
- if (wt == 'fi') {
-    wf = "LARS is functional with RGB lighting that makes him look attractive.";
-     cost = cost + 50;
+ if (wt == 'wh') {
+    wf = "Additionally, it will be in a white case. ";
+     cost = cost + 0;
  }
- else if (wt == 'rp') {
-    wf = "LARS will come with no lights and look lame. ";
+ else if (wt == 'bl') {
+    wf = "Additionally, it will be in a blue case. ";
      cost = cost + 10;
  }
- if (ad == 'gps') {
-    af = "LARS is able to translate up to 20 different languages.";
-     cost = cost + 100;
+   else if (wt == 're') {
+    wf = "Additionally, it will be in a red case. ";
+     cost = cost + 10;
+ } 
+ if (ad == 'saq') {
+    af = "This LARS is able to only grade short answers of a few sentences each. ";
+     cost = cost + 0;
  }
- else if (ad == 'cam') {
-    af = "LARS will be able to provide course materials that will adapt to what the student needs.";
-     cost = cost + 100;
+ else if (ad == 'gra') {
+    af = "In addition to grading short answers, this LARS can also grade and score the grammar for larger pieces of work.";
+     cost = cost + 25;
  }
- else if (ad == 'sen') {
-    af = "The added sensor enables ground station to monitor specific components of the drone, such as its gyroscope or accelerometer.";
-     cost = cost + 100;
+ else if (ad == 'ess') {
+    af = "In addition to grading short answers, this LARS can score the grammar and content of longer pieces of work, such as full length essays.";
+     cost = cost + 50;
  }
 ffr.innerHTML = ff + mf + pf + wf + af;
 cf.innerHTML = "COST (in U.S. dollars): " + cost + "$<br>NOTE- You can't purchase LARS at this moment, this is only an estimation of the costs.";
@@ -324,52 +318,53 @@ jQuery("a.fancybox").fancybox({
                <div class="page-wrapper">
               <br><br>
               	<center>
-              	<h1>Build a LARS Shop</h1>
+              	<h1>Build a LARS Workshop</h1>
               </center>
  <div class="col-sm-3 col-md-6" >
 <form>
    <fieldset class="form-group">
-    <label for="exampleSelect1"><h5>Type</h5></label>
+    <label for="exampleSelect1"><h5>Capacity</h5></label>
     <br>
     <select class="form-control" id="one">
-      <option value="p">Physical</option>
-      <option value="w">Digital</option>
+        <option value="l">Low Capacity (30 sheets)</option>
+      <option value="h">High Capacity (150 sheets)</option>
 
     </select>
     <br>
-    <label for="exampleSelect1"><h5>Programs</h5></label>
+    <label for="exampleSelect1"><h5>Battery Life</h5></label>
     <br>
     <select class="form-control" id="two">
-      <option value="threes">Correct Papers</option>
-      <option value="fours">Tutor Students</option>
-      <option value="sixs"> Build Curriculums</option>
+        <option value="sh">Short Battery Life (5 hours)</option>
+      <option value="lo">Long Battery Life (10 hours)</option>
     </select>
     <br>
-    <label for="exampleSelect1"><h5>Power</h5></label>
+    <label for="exampleSelect1"><h5>RAM</h5></label>
     <br>
     <select class="form-control" id="three">
-      <option value="b">Battery</option>
-      <option value="f">Fuel</option>
+      <option value="sm">2 GB</option>
+      <option value="la">4 GB</option>
       
     </select>
     <br>
     <label for="exampleSelect1"><h5>Color</h5></label>
   <br>
    <select class="form-control" id="four">
-     <option value="fi">RGB Coloring</option>
-     <option value="rp">No Coloring</option>
+     <option value="wh">White</option>
+     <option value="bl">Blue</option>
+     <option value="re">Red</option>
    </select>
    <br>
-   <label for="exampleSelect1"><h5>Additional Programs</h5></label>
+   <label for="exampleSelect1"><h5>Software Package</h5></label>
   <br>
   <select class="form-control" id="exampleSelect1">
-     <option value="gps">Translating</option>
-     <option value="cam">Adaptive Learning</option>      
+     <option value="saq">Just Short Questions</option>
+     <option value="gra">Includes Grammar Grader</option>
+      <option value="ess">Includes Grammar and Essay Grader</option> 
 	
 	   </select>
     
   </fieldset>
-      <button type="button" class="btn btn-primary" id="create" onclick="createDrone()">Create</button>
+      <button type="button" class="btn btn-primary" id="create" onclick="createLARS()">Create</button>
 </form>
 </div>
 <div class="col-sm-3 col-md-6">
